@@ -1,0 +1,21 @@
+export interface EstateInfo {
+    ID: number;
+    name: string;
+    slug: string;
+    address: string;
+    costs: number;
+    state: string;
+    type: string;
+    town: string;
+    townSlug: string;
+    baths?: number;
+    rooms?: number;
+    levels?: number;
+    m2live?: number;
+    m2total?: number;
+    description?: string;
+    parking?: number;
+    images: string[];
+    others?: string[];
+    amenities?: string[];
+};
