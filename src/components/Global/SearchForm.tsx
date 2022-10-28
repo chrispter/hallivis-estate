@@ -7,13 +7,12 @@ import { useRouter } from 'next/router';
 
 export const SearchForm: FC = () => {
 
-    const { error, setError, form: { propriety, city, state }, handleChange, getEstates  } = useContext(SearchContext);
-    const router = useRouter();
+    const { error, setError, form: { type, town, state }, handleChange, getEstates  } = useContext(SearchContext);
 
     const handleSubmit = ( e: any ) => {
         e.preventDefault();
 
-        if(propriety === '' && state === '' && city === ''){
+        if(type === '' && state === '' && town === ''){
             setError(true);
             return
         }
@@ -30,10 +29,10 @@ export const SearchForm: FC = () => {
                 onSubmit={ handleSubmit }
             >
                 <select
-                    name='propriety' 
+                    name='type' 
                     className='py-6 px-2 mr-2 w-full md:w-auto mb-5 md:mb-0' 
                     onChange={ e => handleChange(e) }
-                    value={ propriety }
+                    value={ type }
                 >
                     {typeSearch.map(({ name, slug }) => (
                         <option key={ name } value={ slug }>{ name }</option>
@@ -50,10 +49,10 @@ export const SearchForm: FC = () => {
                     ))}
                 </select>
                 <select 
-                    name='city'
+                    name='town'
                     className='py-6 px-2 mr-2 w-full md:w-auto mb-5 md:mb-0' 
                     onChange={ e => handleChange(e) }
-                    value={ city }
+                    value={ town }
                 >
                     {townSearch.map(({ name, slug }) => (
                         <option key={ name } value={ slug }>{ name }</option>

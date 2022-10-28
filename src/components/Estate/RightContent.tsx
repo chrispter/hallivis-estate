@@ -78,7 +78,7 @@ export const RightContent: FC<Props> = ({
 
             <div className='bg-slate-100 p-5 rounded-3xl mb-5'>
                 <h4 className='font-semibold'>Desde</h4>
-                <h3 className='text-3xl font-semibold'>$ { costs.toLocaleString('en-US')} MXN</h3>
+                <h3 className='text-3xl font-semibold'>$ { costs.toLocaleString('en-US') } MXN</h3>
             </div>
 
             <MediaShare host={ host } />

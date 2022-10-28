@@ -2,7 +2,7 @@ import { ItemEstate } from '../../components/Estate';
 import type { NextPage } from 'next';
 import { Layout } from '../../components/Layout';
 import { estatesInfo } from '../../routes';
-import { Banner } from '../../components/Global';
+import { Banner, SearchForm } from '../../components/Global';
 
 const AboutUsPage: NextPage = () => {
   return (
@@ -13,6 +13,7 @@ const AboutUsPage: NextPage = () => {
         small={ true }
         text='Inmuebles'
       />
+      <SearchForm />
       <div className='py-20 px-10 w-full max-w-[1440px] m-auto flex flex-col md:flex-row flex-wrap'>
         {estatesInfo.map((estate) => (
           <ItemEstate 

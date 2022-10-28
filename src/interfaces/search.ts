@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { EstateInfo } from './estates';
 
 export interface SaleState {
     name: string;
@@ -27,10 +28,11 @@ export interface SearchContextProps {
     setForm: (form: FormState) => void;
     handleChange: ( e: any ) => void;
     getEstates: () => void;
+    resultEstates: EstateInfo[]
 }
 
 export interface FormState {
-    propriety: string;
+    type: string;
     state: string;
-    city: string;
+    town: string;
 }

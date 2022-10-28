@@ -44,7 +44,7 @@ export const ItemEstate: FC<Props> = ({ estate }) => {
             <p>{ address }</p>
             <p className='text-sm'>{ town }</p>
 
-            <h4 className='py-4 text-lg font-semibold'>${ costs.toLocaleString('en-US') } MXN</h4>
+            <h4 className='py-4 text-lg font-semibold'>{ costs.toLocaleString('en-US') } MXN</h4>
             <hr /> 
 
             <div className='flex py-3'>
