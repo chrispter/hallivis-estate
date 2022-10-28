@@ -1,10 +1,12 @@
 import { FormState, SearchContextProps, SearchProps } from "interfaces";
 import { createContext, useState } from "react";
+import { useRouter } from 'next/router';
 
 export const SearchContext = createContext( {} as SearchContextProps );
 
 export const SearchProvider = ( { children }: SearchProps ) => {
 
+    const router = useRouter();
     const { Provider } = SearchContext;
     const [ error, setError ] = useState<boolean>(false);
     const [ form, setForm ] = useState<FormState>({
@@ -19,6 +21,10 @@ export const SearchProvider = ( { children }: SearchProps ) => {
             [e.target.name]: e.target.value
         })
     };
+
+    const getEstates = () => {
+        router.push('/busqueda');
+    }
  
     return (
         <Provider
@@ -28,6 +34,7 @@ export const SearchProvider = ( { children }: SearchProps ) => {
                 form,
                 setForm,
                 handleChange,
+                getEstates,
             }} 
         >
             { children }

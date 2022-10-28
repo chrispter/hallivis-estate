@@ -17,7 +17,9 @@ export const Menu: FC = () => {
               <FaInstagramSquare style={{ fontSize: '30px' }} />
             </li>
             <li className='py-1 px-2'>
-              <FaFacebookSquare style={{ fontSize: '30px' }} />
+              <a href='https://www.facebook.com/profile.php?id=100063964303545' target='_blank' rel="noreferrer" >
+                <FaFacebookSquare style={{ fontSize: '30px' }} />
+              </a>
             </li>
           </ul>
         </div>

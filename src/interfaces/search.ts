@@ -26,6 +26,7 @@ export interface SearchContextProps {
     form: FormState;
     setForm: (form: FormState) => void;
     handleChange: ( e: any ) => void;
+    getEstates: () => void;
 }
 
 export interface FormState {

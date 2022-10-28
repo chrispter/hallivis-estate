@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 export const SearchForm: FC = () => {
 
-    const { error, setError, form: { propriety, city, state }, handleChange,  } = useContext(SearchContext);
+    const { error, setError, form: { propriety, city, state }, handleChange, getEstates  } = useContext(SearchContext);
     const router = useRouter();
 
     const handleSubmit = ( e: any ) => {
@@ -19,7 +19,8 @@ export const SearchForm: FC = () => {
         }
 
         setError(false);
-        router.push('/busqueda');
+        getEstates();
+        
     };
 
     return (
