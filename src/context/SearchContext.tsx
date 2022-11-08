@@ -49,8 +49,6 @@ export const SearchProvider = ( { children }: SearchProps ) => {
                 return estate;
              });
         
-       
-        console.log(estatesFilter);
         setResultEstates(estatesFilter);
 
     }

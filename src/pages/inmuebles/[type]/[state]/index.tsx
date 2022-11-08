@@ -21,7 +21,7 @@ const StatePage: NextPage<Props> = ({ estate, title }) => {
             <div className='py-20 px-10 w-full max-w-[1440px] m-auto flex flex-col md:flex-row flex-wrap'>
                 {estate.map((estate) => (
                     <ItemEstate 
-                        key={ estate.name } 
+                        key={ estate.slug } 
                         estate={ estate }
                     />
                 ))}
